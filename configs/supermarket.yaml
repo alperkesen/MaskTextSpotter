@@ -49,7 +49,7 @@ SEQUENCE:
   TWO_CONV: True
   MEAN_SCORE: True
 DATASETS:
-  TRAIN: ("icdar_2015_train")
+  TRAIN: ("icdar_2015_train",)
   RATIOS: [0.25,0.25,0.25,0.125,0.125]
   TEST: ("icdar_2015_test",)
   AUG: True
