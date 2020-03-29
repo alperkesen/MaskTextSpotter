@@ -28,7 +28,7 @@ class IcdarDataset(object):
         if self.gts_dir is not None:
             gt_path=os.path.join(self.gts_dir,im_name+'.txt')
             if not os.path.isfile(gt_path):
-                gt_path=os.path.join(self.gts_dir,'gt_'+im_name.split('.')[0]+'.txt')
+                gt_path=os.path.join(self.gts_dir, im_name.split('.')[0]+'.txt')
             words,boxes,charsbbs,segmentations=self.load_gt_from_txt(gt_path,height,width)
             target = BoxList(boxes[:,:4], img.size, mode="xyxy",use_char_ann=self.use_charann)
             classes=torch.ones(len(boxes))
