@@ -50,7 +50,7 @@ SEQUENCE:
   MEAN_SCORE: True
 DATASETS:
   TRAIN: ("icdar_2015_train",)
-  RATIOS: [0.25,0.25,0.25,0.125,0.125]
+  RATIOS: [1]
   TEST: ("icdar_2015_test",)
   AUG: True
 DATALOADER:
@@ -61,8 +61,8 @@ SOLVER:
   BASE_LR: 0.001 #0.02
   WARMUP_FACTOR: 0.1
   WEIGHT_DECAY: 0.0001
-  STEPS: (100, 200)
-  MAX_ITER: 300
+  STEPS: (1000, 2000)
+  MAX_ITER: 3000
   IMS_PER_BATCH: 2
   RESUME: True
 OUTPUT_DIR: "./outputs/finetune"
